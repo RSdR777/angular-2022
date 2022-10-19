@@ -1,0 +1,114 @@
+
+/*código css*/
+/*definir clases*/
+.texto25{
+    font-size: 25px;
+    display: inline;
+    color: blueviolet;
+    font-weight: bold;
+    font-style: italic;
+}
+
+p {
+    font-size: 25px !important;
+}
+
+#imagen {
+    width: 100px;
+    border-radius: 10px 20px 15px 30px;    
+}
+
+
+/* <img> es un selector. Puedo aplicar un estilo a todas las imágenes*/
+img {
+    width: 100px;
+    border-radius: 10px 20px 15px 30px;
+
+}
+
+.caja1 {
+    border: 5px solid red;
+    font-size: 25px;
+    margin: 10px;    
+    padding: 5px;
+    height: 100px;
+    width: 200px;
+    box-sizing: border-box; /*defecto*/
+}
+
+.caja2 img {    
+    width: 50px;
+}
+
+div img {
+    width: 60 px;
+}
+
+/*Más específico que todo lo anterior*/
+img#imgDiv {
+    width: 70px;
+}
+
+section > p {
+    color: blue;
+}
+
+h1 +p {
+    color:green;
+}
+
+article h1 ~ p {
+    color:green;
+}
+
+section table thead > tr {
+    background-color: red;
+}
+
+section table > tbody {
+    background-color: aqua;
+}
+
+/*esto no es una pseudoclase*/
+a {
+    text-decoration: none;
+}
+/*esto SÍ es una pseudoclase*/
+a:link {
+    color: brown;
+    font-size: 30px;
+}
+/*esto SÍ es una pseudoclase*/
+a:visited {
+    color:yellow;   
+}
+/*esto SÍ es una pseudoclase*/
+a:hover {
+    color: rgb(0, 255, 128)
+}
+a:active {
+    color:black;
+}
+
+/*nth?*/
+
+#tbl2 tbody tr:last-child {
+    font-size: 35px;
+}
+#tbl2 tbody tr:first-child {
+    font-size: 15px;
+}
+#tbl2 tbody tr:nth-child(odd) {
+    font-size: 25px;
+    color: white;
+    background-color: blue;
+}
+#tbl2 tbody tr:nth-child(even) {
+    font-size: 25px;
+    color: white;
+    background-color: rgb(0, 238, 255);
+}
+
+#tbl3 tbody tr:nth-child(2n+1) {
+    background-color: rgb(255, 136, 0);
+}

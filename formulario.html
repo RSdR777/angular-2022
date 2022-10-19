@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <head>
+        <nav>
+            <a href="./index.html">Volver</a>
+        </nav>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h1>Formularios</h1>
+            <!--formularios -->
+            <!--Vale http://127.0.0.1:5555/formulario.html o http://localhost/formulario.html-->
+            <form action="http://127.0.0.1:5555/formulario.html"
+                method="GET">
+                <label for="txtNombre">Nombre</label>
+                <input type="text" name="nombre" required
+                      placeholder="contenido"
+                      value=""  
+                      size="10"                                          
+                      id="txtNombre">
+                <label for="email">Email</label>
+                <input type="email" name="email" required
+                    id="email">
+                
+                <!--Opciones únicas/múltiples-->
+                <br>
+                
+                <label>Mañana</label>
+                <input type="checkbox" name="tm" value="0">
+                <label>Tarde</label>
+                <input type="checkbox" name="tt" value="1">
+
+                <br>
+                <label>Selecciona una opción</label>
+                <input type="radio" name="r" value="r1">
+                <input type="radio" name="r" value="r2">
+
+                <!--fecha-->
+                <input type="datetime-local" name="fecha">
+
+                <br>
+                <label>Texto Libre</label>
+                <textarea rows="10" cols="80">
+                    Texto libre del textarea
+                </textarea>
+                
+                <label>Número</label>
+                <input type="number" 
+                    name="edad"
+                    min="0"
+                    max="5">
+
+                <br>
+                <label for="fichero">Seleccione archivo</label>
+                <input type="file" id="fichero" name="fichero">
+                
+                <br>
+                <label>Buscar</label>
+                <input type="search">
+                <br>
+                <label>Url</label>
+                <input type="ulr" name="url">
+
+                <br>
+                <label>Select</label>
+                <select name="opciones">
+                    <option value="op1">Opción 1</option>
+                    <option value="op2">Opción 2</option>
+                </select>
+                
+                
+
+                <br>
+                <!--Botón para enviar la información-->
+                <input type="submit" value="Enviar">
+            </form>            
+        </main>
+    </body>
+</body>
+</html>
