@@ -119,14 +119,15 @@ function Paginator (currentPage, totalPage) {
     <nav aria-label="...">
         <ul class="pagination justify-content-center">
             <li class="page-item ${currentPage > 1 ? '' : 'disabled'}">
-                <a class="page-link" href="javascript:()=>{}" tabindex="-1" aria-disabled="true">
+                <a class="page-link" href="javascript:()=>{}" tabindex="-1" aria-disabled="true" ${currentPage > 1 ? `onclick="searchUser(${currentPage-1})"`  : ''} >
                     Previous
                 </a>
             </li>        
             
-            ${Pagina(currentPage, totalPage)}        
-            <li class="page-item">
-                <a class="page-link"  ${currentPage === totalPage ? 'disabled' : ''}  href="javascript:()=>{}" >
+            ${Pagina(currentPage, totalPage)}
+
+            <li class="page-item ${currentPage === totalPage ? 'disabled' : ''}" >
+                <a class="page-link" href="javascript:()=>{}" aria-disabled="true" ${currentPage !== totalPage ? `onclick="searchUser(${currentPage+1})"`  : ''} >
                     Next
                 </a>
             </li>
